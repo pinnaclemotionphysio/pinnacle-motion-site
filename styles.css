@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #0b1f3a;
+}
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  position: sticky;
+  top: 0;
+}
+
+.nav nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #0b1f3a;
+  font-weight: 500;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(11,31,58,0.7), rgba(11,31,58,0.7)),
+    url("https://images.unsplash.com/photo-1576091160550-2173dba999ef");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  padding: 14px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+}
+
+.primary {
+  background: #25D366;
+  color: white;
+}
+
+.secondary {
+  background: gold;
+  color: #0b1f3a;
+}
