@@ -116,3 +116,22 @@ body {
 .card:hover {
   transform: translateY(-5px);
 }
+.reviews {
+  padding: 80px 20px;
+  background: white;
+}
+
+.review-card {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 12px;
+  font-style: italic;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.review-card span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: gold;
+}
