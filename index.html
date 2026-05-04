@@ -45,6 +45,8 @@ function updateCart() {
     list.appendChild(li);
   });
 
+  // ALWAYS update total display
+  
   document.getElementById("total").innerText = total + delivery;
 }
 
@@ -53,6 +55,9 @@ function calculateDelivery() {
   delivery = km * 5;
 
   document.getElementById("delivery").innerText = delivery;
+  
+ // update total properly
+  
   document.getElementById("total").innerText = total + delivery;
 }
 
