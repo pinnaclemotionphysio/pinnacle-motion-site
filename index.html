@@ -23,6 +23,52 @@
     Checkout on WhatsApp
   </button>
 </div>
+  <script>
+let cart = [];
+let total = 0;
+let delivery = 0;
+
+function addToCart(name, price) {
+  cart.push({name, price});
+  total += price;
+
+  updateCart();
+}
+
+function updateCart() {
+  let list = document.getElementById("cart-items");
+  list.innerHTML = "";
+
+  cart.forEach(item => {
+    let li = document.createElement("li");
+    li.innerText = item.name + " - R" + item.price;
+    list.appendChild(li);
+  });
+
+  document.getElementById("total").innerText = total + delivery;
+}
+
+function calculateDelivery() {
+  let km = document.getElementById("distance").value || 0;
+  delivery = km * 5;
+
+  document.getElementById("delivery").innerText = delivery;
+  document.getElementById("total").innerText = total + delivery;
+}
+
+function sendOrder() {
+  let message = "Hi, I want to order:%0A";
+
+  cart.forEach(item => {
+    message += "- " + item.name + " (R" + item.price + ")%0A";
+  });
+
+  message += "Delivery: R" + delivery + "%0A";
+  message += "Total: R" + (total + delivery);
+
+  window.open("https://wa.me/27846969164?text=" + message);
+}
+</script>
 <body>
 
   <header class="nav">
