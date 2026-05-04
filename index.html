@@ -7,36 +7,26 @@
   <title>Pinnacle Motion Physiotherapy</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
+  
 <div class="cart">
-  <h3>Your Cart</h3>
-
-  <ul id="cart-items"></ul>
-
-  <label>Delivery Distance (km):</label>
-  <input type="number" id="distance" oninput="calculateDelivery()" />
-
-  <p>Delivery: R<span id="delivery">0</span></p>
-
-  <p><strong>Total: R<span id="total">0</span></strong></p>
-
-  <button onclick="sendOrder()" class="btn primary">
-    Checkout on WhatsApp
-  </button>
-</div>
-
-  <div class="cart">
   <h3>Your Cart</h3>
 
   <ul id="cartList"></ul>
 
-  <p>Total: R<span id="cartTotal">0</span></p>
+  <div class="delivery-section">
+    <label>Delivery Distance (km):</label>
+    <input type="number" id="distance" oninput="updateDelivery()" />
+    <p>Delivery: R<span id="deliveryCost">0</span></p>
+  </div>
+
+  <p><strong>Total: R<span id="cartTotal">0</span></strong></p>
 
   <button onclick="checkout()" class="btn primary">
     Checkout
   </button>
 </div>
   
-  <script>
+ <script>
 let cart = [];
 let delivery = 0;
 
@@ -59,7 +49,6 @@ function updateCart() {
     itemsTotal += item.price;
   });
 
-  // FINAL TOTAL = items + delivery
   let finalTotal = itemsTotal + delivery;
 
   document.getElementById("cartTotal").innerText = finalTotal;
@@ -72,7 +61,7 @@ function updateDelivery() {
 
   document.getElementById("deliveryCost").innerText = delivery;
 
-  updateCart(); // 🔥 THIS is what fixes your issue
+  updateCart();
 }
 
 function checkout() {
@@ -91,7 +80,7 @@ function checkout() {
 
   window.open("https://wa.me/27846969164?text=" + message);
 }
-</script>
+</script> 
   
 <body>
   <header class="nav">
