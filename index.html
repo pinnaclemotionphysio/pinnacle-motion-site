@@ -35,9 +35,10 @@
     Checkout
   </button>
 </div>
-
+  
   <script>
 let cart = [];
+let delivery = 0;
 
 function addToCart(name, price) {
   cart.push({name, price});
@@ -46,7 +47,7 @@ function addToCart(name, price) {
 
 function updateCart() {
   let list = document.getElementById("cartList");
-  let total = 0;
+  let itemsTotal = 0;
 
   list.innerHTML = "";
 
@@ -55,22 +56,38 @@ function updateCart() {
     li.innerText = item.name + " - R" + item.price;
     list.appendChild(li);
 
-    total += item.price;
+    itemsTotal += item.price;
   });
 
-  document.getElementById("cartTotal").innerText = total;
+  // FINAL TOTAL = items + delivery
+  let finalTotal = itemsTotal + delivery;
+
+  document.getElementById("cartTotal").innerText = finalTotal;
+}
+
+function updateDelivery() {
+  let km = document.getElementById("distance").value || 0;
+
+  delivery = km * 5;
+
+  document.getElementById("deliveryCost").innerText = delivery;
+
+  updateCart(); // 🔥 THIS is what fixes your issue
 }
 
 function checkout() {
   let message = "Hi, I want to order:%0A";
-  let total = 0;
+  let itemsTotal = 0;
 
   cart.forEach(item => {
     message += "- " + item.name + " (R" + item.price + ")%0A";
-    total += item.price;
+    itemsTotal += item.price;
   });
 
-  message += "Total: R" + total;
+  let finalTotal = itemsTotal + delivery;
+
+  message += "Delivery: R" + delivery + "%0A";
+  message += "Total: R" + finalTotal;
 
   window.open("https://wa.me/27846969164?text=" + message);
 }
