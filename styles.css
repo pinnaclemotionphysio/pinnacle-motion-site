@@ -211,15 +211,31 @@ h1, h2, h3 {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  width: 250px;
+  width: 260px;
   background: white;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+  display: flex;
+  flex-direction: column;
 }
 
 .cart ul {
   list-style: none;
   padding: 0;
   margin-bottom: 10px;
+
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.delivery-section {
+  margin-top: 10px;
+}
+
+.delivery-section input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
 }
