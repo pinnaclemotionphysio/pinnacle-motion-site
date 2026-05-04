@@ -189,7 +189,22 @@ h1, h2, h3 {
   letter-spacing: -0.5px;
 }
 
-/* Improve buttons */
+/* Improve buttons */.cart {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 250px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
 .btn {
   font-weight: 600;
   transition: 0.3s;
@@ -207,39 +222,4 @@ h1, h2, h3 {
 /* Container breathing room */
 .container {
   padding: 0 20px;
-}
-.cart {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 260px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-  z-index: 1000;
-}
-
-.cart h3 {
-  margin-bottom: 10px;
-}
-
-.cart ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 15px;
-  max-height: 120px;
-  overflow-y: auto;
-}
-
-.cart input {
-  width: 100%;
-  padding: 5px;
-  margin: 10px 0;
-}
-.cart label,
-.cart input,
-.cart p {
-  display: block;
-  margin-top: 10px;
 }
