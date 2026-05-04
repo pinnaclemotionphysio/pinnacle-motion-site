@@ -5,8 +5,9 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #0b1f3a;
+  line-height: 1.6;
 }
 
 /* NAVBAR */
