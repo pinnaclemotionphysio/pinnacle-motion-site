@@ -12,7 +12,7 @@
   <header class="nav">
     <div class="logo">Pinnacle Motion</div>
     <nav>
-      <a href="#home">Home</a>
+      <a href="#">Home</a>
       <a href="#services">Services</a>
       <a href="#homevisit">Home Visits</a>
       <a href="#hijama">Hijama</a>
@@ -33,20 +33,8 @@
       </div>
     </div>
   </section>
-  <section class="home"
-  id="home">
-<section class="services"
-  id="services">
-  <section class="home-visit"
-  id="homevisit">
-  <section class="shop"
-  id="shop">
-<section class="contact"
-  id="contact">
-<section class="hijama"
-  id="hijama">
-
-
+  <section class="section"
+    id="services">
   
   <div class="container">
     
@@ -120,7 +108,8 @@
 
   </div>
 </section>
-  <section class="home-visit">
+  <section class="home"
+  id="home">
   <div class="container">
 
     <h2 class="section-title">Physiotherapy at Home</h2>
@@ -159,7 +148,8 @@
 </a>
 </body>
 </html>
-<section class="shop">
+<section class="shop"
+  id="shop">
   <div class="container">
 
     <h2 class="section-title">Wellness Products</h2>
@@ -173,24 +163,28 @@
         <h3>Queen’s Drizzle Honey</h3>
         <p>Pure natural honey</p>
         <p class="price">R120</p>
-        <a href="https://wa.me/27846969164?text=Hi, I want to order Queen’s Drizzle Honey"
-           class="btn primary">Order on WhatsApp</a>
+        <button onclick="addToCart('Queens Drizzle Honey',120)" class="btn primary">
+  Add to Cart
+</button>
       </div>
 
       <div class="product-card">
         <h3>Blackseed Oil</h3>
         <p>Natural wellness oil</p>
         <p class="price">R80</p>
-        <a href="https://wa.me/27846969164?text=Hi, I want to order Blackseed Oil"
-           class="btn primary">Order on WhatsApp</a>
+        <button onclick="addToCart('Blackseed Oil',80)" class="btn primary">
+  Add to Cart
+</button>
       </div>
 
       <div class="product-card">
         <h3>Physio Oil</h3>
         <p>Muscle recovery blend</p>
         <p class="price">R90</p>
-        <a href="https://wa.me/27846969164?text=Hi, I want to order Physio Oil"
-           class="btn primary">Order on WhatsApp</a>
+        <button onclick="addToCart('Physio Oil',90)" class="btn primary">
+  Add to Cart
+</button>
+        
       </div>
 
       <div class="cart">
