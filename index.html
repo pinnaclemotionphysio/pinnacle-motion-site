@@ -8,24 +8,6 @@
   <link rel="stylesheet" href="styles.css"/>
 </head>
   
-<div class="cart">
-  <h3>Your Cart</h3>
-
-  <ul id="cartList"></ul>
-
-  <div class="delivery-section">
-    <label>Delivery Distance (km):</label>
-    <input type="number" id="distance" oninput="updateDelivery()" />
-    <p>Delivery: R<span id="deliveryCost">0</span></p>
-  </div>
-
-  <p><strong>Total: R<span id="cartTotal">0</span></strong></p>
-
-  <button onclick="checkout()" class="btn primary">
-    Checkout
-  </button>
-</div>
-  
 <script>
 let cart = {};
 let delivery = 0;
@@ -165,4 +147,5 @@ function checkout() {
   </div>
 
 </section>
+  
 </body>
