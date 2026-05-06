@@ -39,7 +39,8 @@ body {
 }
 
 .hero-logo {
-  width: 120px;
+  width: 180px;
+  max-width: 60%;
   margin-bottom: 20px;
 }
 
