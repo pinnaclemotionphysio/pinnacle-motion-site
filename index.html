@@ -26,12 +26,27 @@
   </button>
 </div>
   
- <script>
-let cart = [];
+<script>
+let cart = {};
 let delivery = 0;
 
 function addToCart(name, price) {
-  cart.push({name, price});
+  if (!cart[name]) {
+    cart[name] = {price: price, qty: 1};
+  } else {
+    cart[name].qty += 1;
+  }
+
+  updateCart();
+}
+
+function changeQty(name, amount) {
+  cart[name].qty += amount;
+
+  if (cart[name].qty <= 0) {
+    delete cart[name];
+  }
+
   updateCart();
 }
 
@@ -41,22 +56,31 @@ function updateCart() {
 
   list.innerHTML = "";
 
-  cart.forEach(item => {
-    let li = document.createElement("li");
-    li.innerText = item.name + " - R" + item.price;
-    list.appendChild(li);
+  for (let name in cart) {
+    let item = cart[name];
+    let itemTotal = item.price * item.qty;
+    itemsTotal += itemTotal;
 
-    itemsTotal += item.price;
-  });
+    let li = document.createElement("li");
+
+    li.innerHTML = `
+      ${name} <br>
+      <button onclick="changeQty('${name}', -1)">-</button>
+      ${item.qty}
+      <button onclick="changeQty('${name}', 1)">+</button>
+      | R${itemTotal}
+      <button onclick="changeQty('${name}', -999)">❌</button>
+    `;
+
+    list.appendChild(li);
+  }
 
   let finalTotal = itemsTotal + delivery;
-
   document.getElementById("cartTotal").innerText = finalTotal;
 }
 
 function updateDelivery() {
   let km = document.getElementById("distance").value || 0;
-
   delivery = km * 5;
 
   document.getElementById("deliveryCost").innerText = delivery;
@@ -68,10 +92,13 @@ function checkout() {
   let message = "Hi, I want to order:%0A";
   let itemsTotal = 0;
 
-  cart.forEach(item => {
-    message += "- " + item.name + " (R" + item.price + ")%0A";
-    itemsTotal += item.price;
-  });
+  for (let name in cart) {
+    let item = cart[name];
+    let itemTotal = item.price * item.qty;
+
+    message += `- ${name} x${item.qty} (R${itemTotal})%0A`;
+    itemsTotal += itemTotal;
+  }
 
   let finalTotal = itemsTotal + delivery;
 
@@ -80,7 +107,7 @@ function checkout() {
 
   window.open("https://wa.me/27846969164?text=" + message);
 }
-</script> 
+</script>
   
 <body>
   <header class="nav">
