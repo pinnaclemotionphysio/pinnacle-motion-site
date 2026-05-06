@@ -239,3 +239,21 @@ h1, h2, h3 {
   padding: 5px;
   margin-top: 5px;
 }
+.cart li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.cart button {
+  margin: 3px;
+  padding: 3px 6px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.cart button:hover {
+  background: #0056b3;
+}
