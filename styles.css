@@ -401,3 +401,44 @@ body {
 
   color: #166534;
 }
+/* ===== ABOUT SECTION ===== */
+
+.about-section {
+  padding: 100px 8%;
+
+  background: #f8fffd;
+}
+
+.about-text {
+  max-width: 800px;
+}
+
+.section-label {
+  color: #16a34a;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 15px;
+}
+
+.about-section h2 {
+  font-size: 42px;
+
+  line-height: 1.2;
+
+  margin-bottom: 25px;
+
+  color: #0f172a;
+}
+
+.about-section p {
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color: #475569;
+
+  margin-bottom: 20px;
+}
