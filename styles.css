@@ -404,9 +404,9 @@ body {
 /* ===== ABOUT SECTION ===== */
 
 .about-section {
-  padding: 100px 8%;
+  padding: 140px 8%;
 
-  background: #f8fffd;
+  background: white;
 }
 
 .about-text {
@@ -424,13 +424,15 @@ body {
 }
 
 .about-section h2 {
-  font-size: 42px;
+  font-size: 52px;
 
-  line-height: 1.2;
+  line-height: 1.15;
 
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   color: #0f172a;
+
+  max-width: 700px;
 }
 
 .about-section p {
@@ -445,9 +447,14 @@ body {
 /* ===== FEATURED SERVICES ===== */
 
 .featured-services {
-  padding: 100px 8%;
+  padding: 120px 8%;
 
-  background: white;
+  background:
+  linear-gradient(
+    to bottom,
+    #f8fffd,
+    #eefcf7
+  );
 }
 
 .section-heading {
@@ -471,27 +478,45 @@ body {
 }
 
 .service-card {
-  background: #f8fffd;
+  background: rgba(255,255,255,0.75);
 
-  padding: 40px 30px;
+  backdrop-filter: blur(12px);
 
-  border-radius: 24px;
+  padding: 45px 35px;
 
-  transition: 0.3s ease;
+  border-radius: 28px;
 
-  box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+  transition: 0.35s ease;
+
+  border: 1px solid rgba(255,255,255,0.6);
+
+  box-shadow:
+  0 10px 40px rgba(0,0,0,0.06);
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
+
+  box-shadow:
+  0 18px 50px rgba(22,163,74,0.12);
 }
 
 .service-icon {
-  font-size: 42px;
+  width: 70px;
+  height: 70px;
 
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #dcfce7;
+
+  font-size: 32px;
+
+  margin-bottom: 25px;
 }
-
 .service-card h3 {
   font-size: 24px;
 
