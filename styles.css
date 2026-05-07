@@ -375,3 +375,29 @@ body {
   border: 2px solid #16a34a;
   color: #16a34a;
 }
+/* ===== TRUST STRIP ===== */
+
+.trust-strip {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  padding: 25px 8%;
+
+  background: white;
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.trust-item {
+  background: #f0fdf4;
+
+  padding: 14px 22px;
+
+  border-radius: 40px;
+
+  font-weight: 600;
+
+  color: #166534;
+}
